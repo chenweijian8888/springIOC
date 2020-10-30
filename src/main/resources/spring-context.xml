@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:util="http://www.springframework.org/schema/util"
+       xmlns:p="http://www.springframework.org/schema/p"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+       http://www.springframework.org/schema/beans/spring-beans.xsd
+        http://www.springframework.org/schema/context
+        https://www.springframework.org/schema/context/spring-context.xsd">
+
+
+
+    <!--开启注解注册-->
+    <context:component-scan base-package="com.qf.spring"/>
+
+    <bean id="user" class="com.qf.spring.bean.User" lazy-init="true">
+         <!-- scope="prototype"-->
+        <!-- init-method="init"-->
+        <!--destroy-method="destroy" scope="prototype"-->
+        <!--p:username="adder" p:addres-ref="addres" p:list-ref="list-->
+
+        <!--<property name="list" ref="list">
+        </property>-->
+
+       <!-- <property name="map" ref="map">
+
+        </property>-->
+
+    </bean>
+
+    <!--<util:list id="list">
+        <value>1111</value>
+        <value>222</value>
+        <value>333</value>
+        <value>444</value>
+    </util:list>
+
+    <util:map id="map">
+        <entry key="11" value="333"/>
+        <entry key="22" value="444"/>
+
+    </util:map>-->
+    <!--<bean id="addres" class="com.qf.spring.bean.Addres">
+
+    </bean>
+-->
+</beans>
